@@ -26,8 +26,12 @@
             <!-- Mobile Navbar -->
             <img class="navbar__logo" src="assets/img/Logo_Juanes__bg.png" alt="Main Logo">
             <div class="navbar__right-container">
-                <button class="navbar__right-container__button">Contact me</button> <!-- Tablet Navbar -->
-                <img class="navbar__right-container__menu" src="assets/img/menu_bar.png" alt="Menu Bar">
+                <button class="right-container__button">Contact me</button> <!-- Tablet Navbar -->
+                <img class="right-container__dark-mode" src="assets/img/dark-mode-icon.png" alt="Dark mode icon"
+                onclick="toggleDarkMode()">
+                <img class="right-container__light-mode" src="assets/img/light-mode-icon.png" alt="Light mode icon"
+                onclick="toggleDarkMode()">
+                <img class="right-container__menu" src="assets/img/menu_bar.png" alt="Menu Bar">
             </div>
             
         </nav>
@@ -111,6 +115,8 @@
 
             <h2 class="contact__title">CONTACT</h2>
 
+            <p class="contact__text">Feel free to Contact me by submitting the form below and we will be in touch</p>
+
             <form class="contact__form" action="#" method="POST">
                 <label class="form__label" for="name">Name:</label>
                 <input class="form__input" type="text" id="name" name="name" required>
@@ -150,9 +156,12 @@
 
         </div>
 
+        <hr class="footer__divisor">
+
         <div class="footer__owner-section">
             <img class="owner-section__image" src="assets/img/Logo_Juanes__bg.png" alt="Main logo">
-            <p class="owner-section__text">Juanes Pachón</p>
+            <p class="owner-section__text">“Follow your dreams and stick to 
+                the plan”</p>
         </div>
 
         <p class="footer__copyright">Copyright©2024</p>
@@ -160,5 +169,6 @@
     </footer>
     <div class="background-image"></div>
     <script src="js/script.js"></script>
+    <script src="js/dark-mode.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@
     --background-color: #f1faee;
     --dark-blue: #1D3557;
     --aquamarine: #2CC798;
+    --dark-mode-bg: #1f1f1f;
 
     --modern-font: "Jersey 10", sans-serif;
     --text-font: "Patua One", serif;
@@ -20,7 +21,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: url("../assets/img/background.jpg"); 
-  background-size: cover;
+  background-size: 220%;
   opacity: 0.035;
 }
 
@@ -49,13 +50,66 @@ h2 {
     margin-top: 3rem;
 }
 
+/* //MARK: Dark mode =====================================================================================================*/
+
+.right-container__light-mode {
+    display: none;
+}
+
+body.dark-mode {
+    background-color: var(--dark-mode-bg);
+}
+
+body.dark-mode .background-image {
+    background-image: url("../assets/img/background_dark.jpg");
+    opacity: 0.05;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p {
+    color: white;
+}
+
+body.dark-mode .main__title span {
+    color: #19a279;
+}
+
+body.dark-mode .portfolio__project {
+    border: black solid 4px;
+    background-color: white;
+}
+
+body.dark-mode .project__button--more-info {
+    background-color: #eaf4d1;
+    border: black solid 4px;
+}
+
+body.dark-mode .contact__form {
+    background-color: #3d4547;
+}
+
+body.dark-mode .form__label {
+    color: white;
+}
+
+body.dark-mode .form__input,
+body.dark-mode .form__textarea {
+    background-color: #9aa4a7;
+}
+
+body.dark-mode .form__button--reset {
+    background-color: rgb(171, 23, 23);
+}
+
+
 /* //MARK: MOBILE ================================================================================================================*/
 
 /* Navbar ================================================================================================================*/
 
 
 .navbar {
-    height: 5rem;
+    height: 4.7rem;
     background-color: var(--dark-blue);
     display: flex;
     justify-content: space-between;
@@ -69,7 +123,20 @@ h2 {
     height: 100%;
 }
 
-.navbar__right-container__button {
+.navbar__right-container {
+    display: flex;
+    column-gap: .7rem;
+    align-items: center;
+}
+
+.right-container__dark-mode,
+.right-container__light-mode {
+    transform: scale(0.8);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.right-container__button {
     display: none;
 }
 
@@ -90,12 +157,13 @@ h2 {
 }
 
 .main__title span {
-    font-size: 3rem;
+    font-size: 2.8rem;
     color: #1c8264;
     stroke: 10px black;
 }
 
 .main__profile-photo {
+    overflow: hidden;
     margin-top: 5rem;
     width: 100%;
     animation: move-photo 1s ease;
@@ -188,7 +256,7 @@ h2 {
     padding: .7rem 0;
     padding-top: 0;
     border-radius: 10px;
-    border: black solid 4px;
+    border: black solid 5px;
     margin: .5rem;
     margin-bottom: 2rem;
 }
@@ -196,6 +264,8 @@ h2 {
 .project__image {
     width: 100%;
     border-bottom: solid black 5px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 .project__info-container {
@@ -214,6 +284,7 @@ h2 {
     background-color: var(--dark-blue);
     color: white;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .project__button--more-info {
@@ -223,9 +294,19 @@ h2 {
 }
 
 /* Contact Section ======================================================================================================*/
-  
+
+.main__contact {
+    margin-bottom: 4rem;
+}
+
 .contact__title {
     margin-top: 2rem;
+}
+
+.contact__text {
+    text-align: center;
+    margin-top: -1rem;
+    padding: 0 2rem;
 }
 
 .contact__form {
@@ -361,27 +442,35 @@ h2 {
     transition: background-color 2s ease;
 }
 
+.footer__divisor {
+    max-width: 100%;
+    margin: 1rem 0;
+}
+
 .footer__owner-section {
     display: flex;
-    width: fit-content;
-    justify-content: center;
-    column-gap: .1rem;
-    margin: 1rem auto;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 .owner-section__image {
     max-width: 3rem;
 }
 
-.owner-section__text,
-.footer__copyright {
+.owner-section__text {
     color: white;
+    text-align: center;
+    width: 70%;
+    margin: 0;
+    margin-bottom: 2rem;
 }
 
 .footer__copyright {
     font-size: .7rem;
     margin: 0 auto;
     margin-bottom: 1rem;
+    color: white;
 }
 
 
@@ -402,7 +491,7 @@ h2 {
         align-items: center;
     }
 
-    .navbar__right-container__button {
+    .right-container__button {
         display: inline;
         text-decoration: none;
         background-color: var(--background-color);
@@ -414,8 +503,13 @@ h2 {
         z-index: 2;
     }
 
-    .navbar__right-container__menu {
+    .right-container__menu {
         transform: scale(1.3);
+    }
+
+    .right-container__dark-mode,
+    .right-container__light-mode {
+        transform: scale(1);
     }
 
 }
