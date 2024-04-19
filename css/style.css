@@ -207,6 +207,10 @@ body.dark-mode .form__button--reset {
 
 /* SKills Section =======================================================================================================*/
 
+.carousel__logo--tablet {
+    display: none;
+}
+
 .skills__carousel-container {
     overflow: hidden;
     width: 100%;
@@ -217,7 +221,7 @@ body.dark-mode .form__button--reset {
   
 .skills__carousel {
     display: flex;
-    animation: scrollLeft 9s linear infinite;
+    animation: scrollLeft 7s linear infinite;
 }
 
 .carousel__logo {
@@ -243,7 +247,7 @@ body.dark-mode .form__button--reset {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-100% - 200px));
+      transform: translateX(calc(-100% - 170px));
     }
     
 }
@@ -346,6 +350,11 @@ body.dark-mode .form__button--reset {
 
 .form__textarea:focus{
     filter: drop-shadow(0 0 3px black);
+}
+
+.form__botton-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .form__button {
@@ -480,6 +489,11 @@ body.dark-mode .form__button--reset {
 
 @media (min-width: 768px) {
 
+    h2 {
+        font-size: 3.7rem;
+        margin-top: 3.5rem;
+    }
+
     .navbar {
         height: 6rem;
         padding-right: 1.5rem;
@@ -510,6 +524,160 @@ body.dark-mode .form__button--reset {
     .right-container__dark-mode,
     .right-container__light-mode {
         transform: scale(1);
+    }
+
+    .main__title {
+        margin-top: 3rem;
+        font-size: 5rem;
+        line-height: .7;
+    }
+    
+    .main__title span {
+        font-size: 3.6rem;
+    }
+    
+    .main__info {
+        margin: 3rem auto;
+        padding: 0 3rem;
+        font-size: 1.5rem;
+    }
+    
+    .main__cv-button {
+        height: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .self-info__text {
+        font-size: 1.2rem;
+        padding: 0 2.6rem;
+    }
+
+    .skills__carousel {
+        animation: scrollLeft 12s linear infinite;
+    }
+
+    .carousel__logo {
+        margin-right: 40px;
+    }
+
+    @keyframes scrollLeft {
+
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-100% - 630px));
+        }
+        
+    }
+
+    .carousel__logo--tablet {
+        display: inline;
+    }
+
+    .portfolio__project {
+        padding-top: 0;
+        margin: 2rem;
+    }
+    
+    .project__image {
+        border-bottom: solid black 8px;
+    }
+    
+    .project__info-container {
+        padding: 0 .7rem;
+    }
+    
+    .project__title {
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+    
+    .project__button {
+        max-width: 49.5%;
+        height: 2.5rem;
+        font-size: 1.2rem;
+        border-radius: 12px;
+    }
+
+    .main__contact {
+        margin-bottom: 4rem;
+    }
+    
+    .contact__text {
+        margin-top: -1rem;
+        padding: 0 3rem;
+        font-size: 1.2rem;
+    }
+    
+    .contact__form {
+        padding: 1.3rem;
+        margin: 2rem;
+        row-gap: .9rem;
+    }
+    
+    .form__label {
+        font-size: 1.6rem;
+    }
+    
+    .form__input {
+        height: 2rem;
+        font-size: 1.4rem;
+        padding: .6rem;
+    }
+    
+    .form__textarea {
+        height: 10rem;
+        font-size: 1.4rem;
+        padding: .6rem;
+    }
+    
+    .form__botton-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 1rem;
+    }
+
+    .form__button {
+        margin: 1rem 0;
+        height: 2.5rem;
+        font-size: 1.3rem;
+        width: 100%;
+    }
+    
+    .footer {
+        border-top: solid 9px var(--aquamarine);
+    }
+    
+    .footer__title {
+        margin: 1rem 0;
+        font-size: 3.2rem;
+    }
+    
+    .footer__socials-container {
+        transform: scale(1.4);
+        padding: 20px 40px;
+    }
+    
+    .footer__owner-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .owner-section__image {
+        max-width: 5rem;
+    }
+    
+    .owner-section__text {
+        width: 50%;
+        font-size: 1.3rem;
+    }
+    
+    .footer__copyright {
+        font-size: 1rem;
     }
 
 }
