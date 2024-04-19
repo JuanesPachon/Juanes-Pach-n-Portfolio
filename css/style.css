@@ -12,6 +12,7 @@
 
 body {
     background-color: var(--background-color);
+    transition: background-color .3s ease;
 }
 
 .background-image {
@@ -23,6 +24,7 @@ body {
   background-image: url("../assets/img/background.jpg"); 
   background-size: 220%;
   opacity: 0.035;
+  transition: background-image 2s ease;
 }
 
 body {
@@ -207,49 +209,58 @@ body.dark-mode .form__button--reset {
 
 /* SKills Section =======================================================================================================*/
 
-.carousel__logo--tablet {
-    display: none;
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
 }
-
-.skills__carousel-container {
+  
+.skills__logos {
     overflow: hidden;
-    width: 100%;
+    padding: 10px 0;
+    white-space: nowrap;
+    position: relative;
     background-color: var(--aquamarine);
     border-top: 8px solid var(--dark-blue);
     border-bottom: 8px solid var(--dark-blue);
 }
   
-.skills__carousel {
-    display: flex;
-    animation: scrollLeft 7s linear infinite;
-}
-
-.carousel__logo {
-    position: relative;
-    top: 3px;
-    margin-right: 20px;
-    align-self: center;
+.skills__logos:before,
+.skills__logos:after {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    content: "";
+    z-index: 2;
 }
   
-.carousel__logo img {
-    width: 100px;
-    height: 100px;
-    align-self: center;
+.skills__logos:before {
+    left: 0;
+    background: linear-gradient(to left, #2cc79800, var(--aquamarine));
 }
   
-.skills__carousel-container:hover .skills__carousel {
+.skills__logos:after {
+    right: 0;
+    background: linear-gradient(to right, #2cc79800, var(--aquamarine));
+}
+  
+.skills__logos:hover .logos-slide {
     animation-play-state: paused;
 }
   
-@keyframes scrollLeft {
-
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-100% - 170px));
-    }
-    
+.logos__slide {
+    display: inline-block;
+    animation: 9s slide infinite linear;
+}
+  
+.logos__slide img {
+    height: 100px;
+    width: 100px;
+    margin: 0 20px;
 }
 
 /* Projects Section ==================================================================================================== */
@@ -311,6 +322,7 @@ body.dark-mode .form__button--reset {
     text-align: center;
     margin-top: -1rem;
     padding: 0 2rem;
+    font-size: .8rem;
 }
 
 .contact__form {
@@ -552,23 +564,9 @@ body.dark-mode .form__button--reset {
         padding: 0 2.6rem;
     }
 
-    .skills__carousel {
-        animation: scrollLeft 12s linear infinite;
-    }
-
-    .carousel__logo {
-        margin-right: 40px;
-    }
-
-    @keyframes scrollLeft {
-
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(calc(-100% - 630px));
-        }
-        
+    .logos:before,
+    .logos:after {
+        width: 100px;
     }
 
     .carousel__logo--tablet {
@@ -681,3 +679,4 @@ body.dark-mode .form__button--reset {
     }
 
 }
+
