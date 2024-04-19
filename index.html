@@ -9,12 +9,156 @@
     
     <link rel='preload' href='css/normalize.css' as='style'>
     <link rel='stylesheet' href='css/normalize.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Patua+One&display=swap" rel="stylesheet">
     
     <link rel='icon' href='assets/img/favicon.png' type='image/x-icon'>
 
     <title>Juanes Pachon 💎</title>
 </head>
 <body>
+
+    <header class="header">
+
+        <nav class="navbar">
+            <!-- Mobile Navbar -->
+            <img class="navbar__logo" src="assets/img/Logo_Juanes__bg.png" alt="Main Logo">
+            <div class="navbar__right-container">
+                <button class="navbar__right-container__button">Contact me</button> <!-- Tablet Navbar -->
+                <img class="navbar__right-container__menu" src="assets/img/menu_bar.png" alt="Menu Bar">
+            </div>
+            
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <div class="main__title-container">
+            <h1 class="main__title">HI, I'M JUANES<br><span class="animated-text"></span></h1> 
+        </div>
+    
+        <img  class="main__profile-photo" src="assets/img/profile-photo.webp" alt="My Profile Photo">
+
+        <p class="main__info">"I'm a passionate UI/UX designer with a mission to create delightful and intuitive digital experiences."</p>
+
+        <button class="main__cv-button">Download CV</button>
+
+        <section class="main__self-info">
+
+            <h2 class="self-info__title">ABOUT ME</h2>
+
+            <p class="self-info__text">I'm an enthusiastic web developer driven by a love for crafting digital wonders. Committed to honing skills and bringing creative visions to life. Embracing the journey of web development with eagerness and dedication. Continuously exploring new technologies and techniques to enhance web projects. Fueled by a passion for problem-solving and creating user-friendly experiences. Dedicated to staying updated in the ever-evolving landscape of web development.</p>
+            
+        </section>
+
+        <section class="main__skills">
+
+            <h2 class="skills__title">MY SKILLS</h2>
+
+            <div class="skills__carousel-container">
+                <div class="skills__carousel">
+                    <div class="carousel__logo"><img src="assets/img/icons_html5.png" alt="HTML"></div>
+                    <div class="carousel__logo"><img src="assets/img/icons_css3.png" alt="CSS"></div>
+                    <div class="carousel__logo"><img src="assets/img/icons_JavaScript.png" alt="JAVASCRIPT"></div>
+                    <div class="carousel__logo"><img src="assets/img/icons_bootstrap.png" alt="BOOSTRAP"></div>
+                    <div class="carousel__logo"><img src="assets/img/icons_tailwind.png" alt="TAILWIND"></div>
+                    <div class="carousel__logo"><img src="assets/img/icons_html5.png" alt="HTML"></div>
+                    <div class="carousel__logo"><img src="assets/img/icons_css3.png" alt="CSS"></div>
+                    <div class="carousel__logo"><img src="assets/img/icons_JavaScript.png" alt="JAVASCRIPT"></div>
+                    <div class="carousel__logo"><img src="assets/img/icons_bootstrap.png" alt="BOOSTRAP"></div>
+                    <div class="carousel__logo"><img src="assets/img/icons_tailwind.png" alt="TAILWIND"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="main__portfolio">
+
+            <h2 class="portfolio__title">MY PROJECTS</h2>
+
+            <article class="portfolio__project">
+                <img class="project__image" src="assets/img/project_landing.webp" alt="Landing Page Project">
+                <div class="project__info-container">
+                    <h3 class="project__title">Paraiso Paipa landing page</h3>
+                    <button class="project__button">Live Demo</button>
+                    <button class="project__button project__button--more-info">More info</button>
+                </div>
+            </article>
+
+            <article class="portfolio__project">
+                <img class="project__image" src="assets/img/project_recipes.webp" alt="Recipes Page Project">
+                <div class="project__info-container">
+                    <h3 class="project__title">BIT Cook recipes page</h3>
+                    <button class="project__button">Live Demo</button>
+                    <button class="project__button project__button--more-info">More info</button>
+                </div>
+            </article>
+
+            <article class="portfolio__project">
+                <img class="project__image" src="assets/img/project_encryptor.webp" alt="Encrytor Page Project">
+                <div class="project__info-container">
+                    <h3 class="project__title">Alura encrytor page</h3>
+                    <button class="project__button">Live Demo</button>
+                    <button class="project__button project__button--more-info">More info</button>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="main__contact">
+
+            <h2 class="contact__title">CONTACT</h2>
+
+            <form class="contact__form" action="#" method="POST">
+                <label class="form__label" for="name">Name:</label>
+                <input class="form__input" type="text" id="name" name="name" required>
+                
+                <label class="form__label" for="email">Email:</label>
+                <input class="form__input" type="email" id="email" name="email" required>
+                
+                <label class="form__label" for="message">Message:</label>
+                <textarea class="form__textarea" id="message" name="message" required></textarea>
+                
+                <button  class="form__button" type="submit">Send</button>
+                <button  class="form__button form__button--reset" type="reset">Reset</button>
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <h2 class="footer__title">SOCIAL</h2>
+
+        <div class="footer__socials-container">
+
+            <a href="#" class="social github">
+                <img src="assets/img/github.svg" alt="Github logo">
+            </a>
+            <a href="#" class="social linkedin">
+                <img src="assets/img/linkedin.svg" alt="Linkedin logo">
+            </a>
+            <a href="#" class="social gmail">
+                <img src="assets/img/gmail.svg" alt="Gmail logo">
+            </a>
+            <a href="#" class="social instagram">
+                <img src="assets/img/instagram.svg" alt="Instagram logo">
+            </a>
+
+        </div>
+
+        <div class="footer__owner-section">
+            <img class="owner-section__image" src="assets/img/Logo_Juanes__bg.png" alt="Main logo">
+            <p class="owner-section__text">Juanes Pachón</p>
+        </div>
+
+        <p class="footer__copyright">Copyright©2024</p>
+          
+    </footer>
+    <div class="background-image"></div>
     <script src="js/script.js"></script>
 </body>
 </html>
