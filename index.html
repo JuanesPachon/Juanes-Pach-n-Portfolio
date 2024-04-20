@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel='preload' href='style.css' as='style'>
+    <link rel='preload' href='css/style.css' as='style'>
     <link rel='stylesheet' href='css/style.css'>
     
     <link rel='preload' href='css/normalize.css' as='style'>
@@ -48,30 +48,36 @@
                 </div>
                 
         
-                <a class="navbar__scroll-link">
+                <div class="navbar__scroll-link">
                     <img class="scroll-link__image" src="assets/img/home.png" alt="Home-icon">
                     <p class="scroll-link__text">HOME</p>
-                </a>
+                </div>
 
-                <a class="navbar__scroll-link">
+                <div class="navbar__scroll-link">
                     <img class="scroll-link__image" src="assets/img/user.png" alt="About me-icon">
                     <p class="scroll-link__text">ABOUT ME</p>
-                </a>
+                </div>
 
-                <a class="navbar__scroll-link">
+                <div class="navbar__scroll-link">
                     <img class="scroll-link__image" src="assets/img/skills.png" alt="Skills-icon">
                     <p class="scroll-link__text">SKILLS</p>
-                </a>
+                </div>
 
-                <a class="navbar__scroll-link">
+                <div class="navbar__scroll-link">
                     <img class="scroll-link__image" src="assets/img/portfolio.png" alt="Projects-icon">
                     <p class="scroll-link__text">PORTFOLIO</p>
-                </a>
+                </div>
 
-                <a class="navbar__scroll-link">
+                <div class="navbar__scroll-link">
                     <img class="scroll-link__image" src="assets/img/contact.png" alt="Contact-icon">
                     <p class="scroll-link__text">CONTACT</p>
-                </a>    
+                </div>
+                
+                <div class="navbar__scroll-link" id="navbar__scroll-link__desktop">
+                    <img class="scroll-link__image" src="assets/img/social.png" alt="Contact-icon">
+                    <p class="scroll-link__text">SOCIAL</p>
+                </div>   
+                
             </div>
         </nav>
     </header>
@@ -85,7 +91,7 @@
     
         <img  class="main__profile-photo" src="assets/img/profile-photo.webp" alt="My Profile Photo">
 
-        <p class="main__info">"I'm a passionate UI/UX designer with a mission to create delightful and intuitive digital experiences."</p>
+        <p class="main__info">"I'm a passionate Web Developer with a mission to create delightful and intuitive digital experiences."</p>
     </div>
 
     <div class="main__my-info--desktop">
@@ -93,7 +99,7 @@
             <div class="main__title-container">
                 <h1 class="main__title">HI, I'M JUANES<br><span class="animated-text-2"></span></h1> 
             </div>
-            <p class="main__info">"I'm a passionate UI/UX designer with a mission to create delightful and intuitive digital experiences."</p>
+            <p class="main__info">"I'm a passionate Web Developer with a mission to create delightful and intuitive digital experiences."</p>
         </div>
 
         <img  class="main__profile-photo" src="assets/img/profile-photo.webp" alt="My Profile Photo">
@@ -142,8 +148,8 @@
                 <img class="project__image" src="assets/img/project_landing.webp" alt="Landing Page Project">
                 <div class="project__info-container">
                     <h3 class="project__title">Paraiso Paipa landing page</h3>
-                    <button class="project__button">Live Demo</button>
-                    <button class="project__button project__button--more-info">More info</button>
+                    <a href="https://juanespachon.github.io/Landing-Page-JP/" target="_blank" class="project__button">Live Demo</a>
+                    <a id="more-info__mobile" class="project__button project__button--more-info">More info</a>
                 </div>
             </article>
 
@@ -151,8 +157,8 @@
                 <img class="project__image" src="assets/img/project_recipes.webp" alt="Recipes Page Project">
                 <div class="project__info-container">
                     <h3 class="project__title">BIT Cook recipes page</h3>
-                    <button class="project__button">Live Demo</button>
-                    <button class="project__button project__button--more-info">More info</button>
+                    <a href="https://juanespachon.github.io/BIT-Cook-Final-Project/" target="_blank" class="project__button">Live Demo</a>
+                    <a id="more-info__mobile-2" class="project__button project__button--more-info">More info</a>
                 </div>
             </article>
 
@@ -160,8 +166,8 @@
                 <img class="project__image" src="assets/img/project_encryptor.webp" alt="Encrytor Page Project">
                 <div class="project__info-container">
                     <h3 class="project__title">Alura encrytor page</h3>
-                    <button class="project__button">Live Demo</button>
-                    <button class="project__button project__button--more-info">More info</button>
+                    <a href="https://juanespachon.github.io/Encriptador-JP/" target="_blank" class="project__button">Live Demo</a>
+                    <a id="more-info__mobile-3" class="project__button project__button--more-info">More info</a>
                 </div>
             </article>
 
@@ -170,11 +176,11 @@
                 <div class="portfolio__card">
                     <img class="project__image" src="assets/img/project_landing.webp" alt="Landing Page Project">
                     <div class="card__content">
-                        <p class="card__title">Project Name</p>
-                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        <p class="card__title">Paraiso Paipa</p>
+                        <p class="card__description">This trial landing page is a showcase of exciting buggy routes, extending an invitation to adventurers to connect and embark on thrilling explorations. It offers a gateway to discover the adrenaline-fueled world of buggy adventure.</p>
                         <div class="card__button-container">
-                            <button class="card__button">Live Demo</button>
-                            <button class="card__button secondary">Source Code</button>
+                            <a href="https://juanespachon.github.io/Landing-Page-JP/" class="card__button">Live Demo</a>
+                            <button id="card__button" class="card__button card__button--secondary">More Info</button>
                         </div>  
                     </div>
                 </div>
@@ -182,27 +188,90 @@
                 <div class="portfolio__card">
                     <img class="project__image" src="assets/img/project_recipes.webp" alt="Recipes Page Project">
                     <div class="card__content">
-                      <p class="card__title">Project Name</p>
-                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                      <p class="card__title">BIT Cook</p>
+                      <p class="card__description">An experimental endeavor, this recipe page serves as a platform to test and showcase front-end design prowess, offering a tantalizing glimpse into the world of culinary creativity.</p>
                       <div class="card__button-container">
-                        <button class="card__button">Live Demo</button>
-                        <button class="card__button secondary">Source Code</button>
-                    </div>
+                            <a href="" class="card__button">Live Demo</a>
+                            <button id="card__button-2" class="card__button card__button--secondary">More Info</button>
+                      </div>
                     </div>
                 </div>
     
                 <div class="portfolio__card">
                     <img class="project__image" src="assets/img/project_encryptor.webp" alt="Encrytor Page Project">
                     <div class="card__content">
-                      <p class="card__title">Project Name</p>
-                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                      <p class="card__title">Alura Encrytor</p>
+                      <p class="card__description">Designed as a test project for Alura Latam, this web application offers text encryption and decryption features, serving as a comprehensive tool for secure data communication.</p>
                       <div class="card__button-container">
-                        <button class="card__button">Live Demo</button>
-                        <button class="card__button secondary">Source Code</button>
-                    </div>
+                            <a href="" class="card__button">Live Demo</a>
+                            <button id="card__button-3" class="card__button card__button--secondary">More Info</button>
+                      </div>
                     </div>
                 </div>
 
+            </div>
+
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+        
+                    <img  class="content__image" src="assets/img/project_landing.webp" alt="Imagen">
+                    <h4 class="content__title">Paraiso Paipa</h4>
+                    <p class="content__text">This trial landing page is a showcase of exciting buggy routes, extending an invitation to adventurers to connect and embark on thrilling explorations. It offers a gateway to discover the adrenaline-fueled world of buggy adventure.</p>
+                    <h4 class="content__title">Tools Used</h4>
+                    <ul class="content__list">
+                        <li class="list__item">HTML</li>
+                        <li class="list__item">CSS</li>
+                        <li class="list__item">Javascript</li>
+                    </ul>
+                    <div class="content__button__container">
+                        <a href="https://juanespachon.github.io/Landing-Page-JP/" target="_blank" class="content__button">Live Demo</a>
+                        <a href="https://github.com/JuanesPachon/Landing-Page-JP" target="_blank"  class="content__button content__botton--2">Project Link</a>
+                        <img  class="button__image" src="assets/img/overlay_github.png" alt="Github Icon">
+                    </div>  
+        
+                </div>
+            </div>
+
+            <div id="overlay-2" class="overlay">
+                <div class="overlay-content">
+        
+                    <img  class="content__image" src="assets/img/project_recipes.webp" alt="Imagen">
+                    <h4 class="content__title">BIT Cook</h4>
+                    <p class="content__text">An experimental endeavor, this recipe page serves as a platform to test and showcase front-end design prowess, offering a tantalizing glimpse into the world of culinary creativity and this web page may be useful to represent a cuulinary business.</p>
+                    <h4 class="content__title">Tools Used</h4>
+                    <ul class="content__list">
+                        <li class="list__item">HTML</li>
+                        <li class="list__item">CSS</li>
+                        <li class="list__item">Javascript</li>
+                    </ul>
+                    <div class="content__button__container">
+                        <a href="https://juanespachon.github.io/BIT-Cook-Final-Project/" target="_blank"  class="content__button">Live Demo</a>
+                        <a href="https://github.com/JuanesPachon/BIT-Cook-Final-Project" target="_blank"  class="content__button content__botton--2">Project Link</a>
+                        <img  class="button__image" src="assets/img/overlay_github.png" alt="Github Icon">
+                    </div>  
+        
+                </div>
+            </div>
+
+            <div id="overlay-3" class="overlay">
+                <div class="overlay-content">
+        
+                    <img  class="content__image" src="assets/img/project_encryptor.webp" alt="Imagen">
+                    <h4 class="content__title">Alura Encryptor</h4>
+                    <p class="content__text">Designed as a test project for Alura Latam, this web application offers text encryption and decryption features, serving as a comprehensive tool for secure data communication and it has the posibility to improve the functions quality.</p>
+                    <h4 class="content__title">Tools Used</h4>
+                    <ul class="content__list">
+                        <li class="list__item">HTML</li>
+                        <li class="list__item">CSS</li>
+                        <li class="list__item">Javascript</li>
+                    </ul>
+                    <div class="content__button__container">
+                        <a href="https://juanespachon.github.io/Encriptador-JP/" target="_blank"  class="content__button">Live Demo</a>
+                        <a href="https://github.com/JuanesPachon/Encriptador-JP" target="_blank"  class="content__button content__botton--2">Project Link</a>
+                        <img  class="button__image" src="assets/img/overlay_github.png" alt="Github Icon">
+                    </div>  
+        
+                </div>
             </div>
               
 
@@ -240,13 +309,13 @@
 
         <div class="footer__socials-container">
 
-            <a href="#" class="social github">
+            <a href="https://github.com/JuanesPachon" target="_blank" class="social github">
                 <img src="assets/img/github.svg" alt="Github logo">
             </a>
-            <a href="#" class="social linkedin">
+            <a href="https://www.linkedin.com/in/juanes-pachon" target="_blank" class="social linkedin">
                 <img src="assets/img/linkedin.svg" alt="Linkedin logo">
             </a>
-            <a href="#" class="social gmail">
+            <a href="mailto:kilkercode@gmail.com" target="_blank" class="social gmail">
                 <img src="assets/img/gmail.svg" alt="Gmail logo">
             </a>
             <a href="#" class="social instagram">

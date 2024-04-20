@@ -60,3 +60,98 @@ function startAnimation2() {
 }
 
 startAnimation2();
+
+//===================================================================================================
+
+const navbarLink = document.querySelectorAll(".navbar__scroll-link");
+const footerImg = document.querySelector(".owner-section__image")
+const home = document.querySelector(".main");
+const aboutMe = document.querySelector(".self-info__title");
+const skills = document.querySelector(".main__skills");
+const portfolio = document.querySelector(".portfolio__title");
+const contact = document.querySelector(".contact__title");
+const social = document.querySelector(".footer__title");
+
+
+navbarLink[0].addEventListener("click", () => {
+  home.scrollIntoView({ behavior: "smooth" });
+})
+
+navbarLink[1].addEventListener("click", () => {
+  aboutMe.scrollIntoView({ behavior: "smooth" });
+})
+
+navbarLink[2].addEventListener("click", () => {
+  skills.scrollIntoView({ behavior: "smooth" });
+})
+
+navbarLink[3].addEventListener("click", () => {
+  portfolio.scrollIntoView({ behavior: "smooth" });
+})
+
+navbarLink[4].addEventListener("click", () => {
+  contact.scrollIntoView({ behavior: "smooth" });
+})
+
+navbarLink[5].addEventListener("click", () => {
+  social.scrollIntoView({ behavior: "smooth" });
+})
+
+footerImg.addEventListener("click", () => {
+  home.scrollIntoView({ behavior: "smooth" });
+})
+
+//=====================================================================================================
+
+const moreInfo = document.querySelector("#card__button");
+const moreInfo2 = document.querySelector("#card__button-2");
+const moreInfo3 = document.querySelector("#card__button-3");
+const moreInfoMobile = document.getElementById("more-info__mobile");
+const moreInfoMObile2 = document.getElementById("more-info__mobile-2");
+const moreInfoMobile3 = document.getElementById("more-info__mobile-3");
+const overlay = document.getElementById("overlay"); 
+const overlay2 = document.getElementById("overlay-2"); 
+const overlay3 = document.getElementById("overlay-3"); 
+
+
+moreInfo.addEventListener('click', function() {
+  overlay.style.display = 'block';
+});
+
+moreInfo2.addEventListener('click', function() {
+  overlay2.style.display = 'block';
+});
+
+moreInfo3.addEventListener('click', function() {
+  overlay3.style.display = 'block';
+});
+
+moreInfoMobile.addEventListener('click', function() {
+  overlay.style.display = 'block';
+});
+
+moreInfoMObile2.addEventListener('click', function() {
+  overlay2.style.display = 'block';
+});
+
+moreInfoMobile3.addEventListener('click', function() {
+  overlay3.style.display = 'block';
+});
+
+overlay.addEventListener('click', function(event) {
+  if (event.target === this) {
+    this.style.display = 'none';
+  }
+});
+
+overlay2.addEventListener('click', function(event) {
+  if (event.target === this) {
+    this.style.display = 'none';
+  }
+});
+
+overlay3.addEventListener('click', function(event) {
+  if (event.target === this) {
+    this.style.display = 'none';
+  }
+});

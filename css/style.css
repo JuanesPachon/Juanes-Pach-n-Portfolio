@@ -55,8 +55,31 @@ h2 {
 
 .desktop-navbar,
 .main__my-info--desktop,
-.portfolio__container {
+.portfolio__container,
+.overlay {
     display: none;
+}
+
+scrollbar {
+    background-color: #deccba00;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+  
+scrollbar thumb {
+    background-color: var(--dark-blue);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar {
+    background-color: #deccba00;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-blue);
+    border-radius: 100px;
 }
 
 /* //MARK: Dark mode =====================================================================================================*/
@@ -112,7 +135,8 @@ body.dark-mode .form__button--reset {
     background-color: rgb(171, 23, 23);
 }
 
-body.dark-mode .scroll-link__text {
+body.dark-mode .scroll-link__text,
+body.dark-mode .content__text {
     color: black;
 }
 
@@ -209,6 +233,16 @@ body.dark-mode .scroll-link__text {
     align-self: center;
     border-radius: 25px;
     color: white;
+    cursor: pointer;
+    transition: background-color .5s ease;
+    transition: box-shadow .5s ease;
+}
+
+.main__cv-button:hover {
+    background-color: #285491;
+    box-shadow: 0px 1px 20px 1px var(--dark-blue);
+    -webkit-box-shadow: 0px 1px 20px 1px var(--dark-blue);
+    -moz-box-shadow: 0px 1px 20px 1px var(--dark-blue);
 }
 
 /* About me Section ======================================================================================================*/
@@ -300,19 +334,24 @@ body.dark-mode .scroll-link__text {
 
 .project__title {
     margin: .7rem 0;
+    margin-bottom: 1rem;
     font-size: 1.3rem;
     color: white;
 }
 
 .project__button {
+    display: block;
     width: 100%;
-    margin: .2rem 0;
-    height: 2.5rem;
+    margin: .3rem 0;
+    margin-top: .5rem;
     background-color: #28589b;
     color: white;
     border-radius: 10px;
     cursor: pointer;
     border: 4px solid black;
+    text-decoration: none;
+    text-align: center;
+    padding: .4rem 0;
 }
 
 .project__button--more-info {
@@ -321,10 +360,93 @@ body.dark-mode .scroll-link__text {
     color: var(--dark-blue);
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1d3557d5;
+    z-index: 5;
+}
+      
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../assets/img/overlay_background.png");
+    background-size: contain;
+    padding: 25px 15px;
+    border-radius: 20px;
+    max-height: 100%;
+    width: 80%;
+    border: 5px solid black;
+}
+    
+.content__image {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin-bottom: .5rem;
+}
+    
+.content__title {
+    margin: .1rem 0;
+    font-size: 1.3rem;
+}
+    
+.content__text {
+    font-size: clamp(.5rem, 4.3vw, 1rem);
+    color: black;
+}
+    
+.content__list {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    column-gap: .4rem;
+    margin-left: -2rem;
+    margin-bottom: 1.5rem;
+}
+    
+.list__item {
+    padding: .4rem;
+    background-color: rgb(200, 200, 207);
+    border-radius: 10px;
+}
+    
+.content__button__container {
+    display: flex;
+    column-gap: 1rem;
+    row-gap: .5rem;
+    align-items: center;
+    flex-direction: column;
+}
+    
+.content__button {
+    padding: clamp(.4rem, 3vw, .7rem) .2rem;
+    background-color: var(--dark-blue);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+.content__button:hover {
+    background-color: #28589b;
+}
+
+.button__image {
+    display: none;
+}
+
 /* Contact Section ======================================================================================================*/
 
 .main__contact {
     margin-bottom: 4rem;
+    z-index: 1;
 }
 
 .contact__title {
@@ -343,7 +465,8 @@ body.dark-mode .scroll-link__text {
     flex-direction: column;
     row-gap: .4rem;
     padding: 1rem;
-    background-color: var(--dark-blue);
+    background-image: url("../assets/img/background-navbar.png");
+    background-size: contain;
     border: 4px solid black;
     border-radius: 10px;
     max-width: 100%;
@@ -377,7 +500,7 @@ body.dark-mode .scroll-link__text {
 }
 
 .form__textarea:focus{
-    filter: drop-shadow(0 0 .5px white);
+    filter: drop-shadow(0 0 .4rem white);
 }
 
 .form__botton-container {
@@ -392,6 +515,15 @@ body.dark-mode .scroll-link__text {
     color: white;
     border-radius: 10px;
     border: solid 3.5px black;
+    cursor: pointer;
+}
+
+.form__button:hover {
+    background-color: #2c6ac1;
+}
+
+.form__button--reset:hover {
+    background-color: rgb(239, 53, 53);
 }
 
 .form__button--reset {
@@ -402,8 +534,11 @@ body.dark-mode .scroll-link__text {
 /* Footer Section =======================================================================================================*/
 
 .footer {
-    background-color: var(--dark-blue);
+    background-image: url("../assets/img/background-navbar.png");
+    background-size: contain;
     border-top: solid 7px var(--aquamarine);
+    z-index: 1;
+    overflow: hidden;
 }
 
 .footer__title {
@@ -420,7 +555,6 @@ body.dark-mode .scroll-link__text {
     justify-content: center;
     gap: 25px;
     padding: 5px 40px;
-    background-color: var(--dark-blue);
 }
 
 .social {
@@ -494,6 +628,7 @@ body.dark-mode .scroll-link__text {
 
 .owner-section__image {
     max-width: 3rem;
+    cursor: pointer;
 }
 
 .owner-section__text {
@@ -517,6 +652,10 @@ body.dark-mode .scroll-link__text {
 /* //MARK: RESPONSIVE TABLET ============================================================================================*/
 
 @media (min-width: 768px) {
+
+    .navbar__scroll-link--large-desktop {
+        display: none;
+    }
 
     h2 {
         font-size: 3.7rem;
@@ -608,11 +747,27 @@ body.dark-mode .scroll-link__text {
         font-size: 2rem;
     }
     
+    .card__button-container {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+    }
+
     .project__button {
-        max-width: 49.5%;
-        height: 2.5rem;
+        width: 100%;
+        height: 1.8rem;
         font-size: 1.2rem;
         border-radius: 12px;
+    }
+
+    .content__button__container {
+        flex-direction: row;
+    }
+    
+    .content__button {
+        padding: .7rem 1rem;
+        border-radius: 20px;
+        width: 50%;
     }
 
     .main__contact {
@@ -724,10 +879,22 @@ body.dark-mode .scroll-link__text {
         position: fixed;
         grid-column: 1 / 2;
         width: 16.7%;
-        height: 100vh;
+        height: 100%;
+        max-height: 100vw;
+        overflow: auto;
         background-image: url("../assets/img/background-navbar.png");
         background-size: cover;
         border-right: solid 5px var(--aquamarine);
+        scrollbar-width: thin;
+        scrollbar-color: var(--aquamarine) white;
+    }
+
+    .desktop-navbar::-webkit-scrollbar {
+        background-color: white;
+    }
+
+    .desktop-navbar::-webkit-scrollbar-thumb {
+        background-color: var(--aquamarine);
     }
 
     .right-container__dark-mode2,
@@ -773,6 +940,14 @@ body.dark-mode .scroll-link__text {
         column-gap: .6rem;
         border-radius: 20px;
         border: 4px solid #103c2f;
+        transition: box-shadow .5s ease;
+        cursor: pointer;
+    }
+
+    .navbar__scroll-link:hover {
+        box-shadow: 0px 1px 25px 1px rgba(95,216,49,0.98);
+        -webkit-box-shadow: 0px 1px 25px 1px rgba(95,216,49,0.98);
+        -moz-box-shadow: 0px 1px 25px 1px rgba(95,216,49,0.98);
     }
 
     .scroll-link__text {
@@ -857,7 +1032,8 @@ body.dark-mode .scroll-link__text {
         box-sizing: border-box;
         position: relative;
         width: 99%;
-        background-color: var(--dark-blue);
+        background-image: url("../assets/img/background-navbar.png");
+        background-size: contain;
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -934,6 +1110,7 @@ body.dark-mode .scroll-link__text {
     }
       
     .card__button {
+        box-sizing: border-box;
         width: 100%;
         margin-top: 20px;
         height: 2.5rem;
@@ -942,19 +1119,98 @@ body.dark-mode .scroll-link__text {
         background-color: var(--dark-blue);
         border: none;
         color: white;
+        cursor: pointer;
+        transition: background-color .6s ease;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .card__button:nth-child(1) {
+        padding: .58rem 0;
     }
       
-    .secondary {
+    .card__button--secondary {
         background: transparent;
         color: var(--dark-blue);
         background-color: white;
         border: 1px solid #777;
+        transition: background-color .6s ease;
+    }
+
+    .card__button:hover {
+        background-color: #4479c2;
+        border: 3px solid black;
+    }
+
+    .card__button--secondary:hover {
+        background-color: rgb(222, 210, 210);
     }
       
+    .overlay-content {
+        max-height: 80vh;
+        max-width: 40vw;
+        padding: 25px 20px;
+    }
+    
+    .content__image {
+        max-height: 18vw;
+        margin-bottom: .25rem;
+    }
+    
+    .content__title {
+        margin: .4rem 0;
+        font-size: 1.5rem;
+    }
+    
+    .content__text {
+        font-size: 1.05vw;
+    }
+    
+    .content__button__container {
+        flex-direction: row;
+    }
+    
+    .content__button {
+        padding: .7rem 1rem;
+        border-radius: 20px;
+        width: 20%;
+    }
+
+    .content__button:hover {
+        background-color: #28589b;
+    }
+    
+    .button__image {
+        display: inline;
+        width: 2rem;
+    }
+
+    .main__contact {
+        z-index: 1;
+    }
 
     .contact__form {
         width: 60%;
         margin: 2rem auto;
+        margin-bottom: 0rem;
+    }
+
+    .form__input {
+        height: 1rem;
+    }
+
+    .form__textarea {
+        height: 7rem;
+        font-size: 1rem;
+    }
+
+    .form__button {
+        width: 30%;
+        margin-bottom: 0;
+    }
+
+    .footer {
+        z-index: 1;
     }
 
     .footer__socials-container {
