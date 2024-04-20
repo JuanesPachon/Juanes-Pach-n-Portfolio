@@ -37,12 +37,48 @@
         </nav>
 
         <nav class="desktop-navbar">
-            <img class="desktop-navbar__logo" src="assets/img/Logo_Juanes__bg.png" alt="Main Logo">
+
+            <div class="navbar__container">
+                <div class="navbar-title__Container">
+                    <img class="navbar__logo--desktop" src="assets/img/Logo_Juanes__bg.png" alt="Main Logo">
+                    <img class="right-container__dark-mode2" src="assets/img/dark-mode-icon.png" alt="Dark mode icon"
+                    onclick="toggleDarkMode()">
+                    <img class="right-container__light-mode2" src="assets/img/light-mode-icon.png" alt="Light mode icon"
+                    onclick="toggleDarkMode()">
+                </div>
+                
+        
+                <a class="navbar__scroll-link">
+                    <img class="scroll-link__image" src="assets/img/home.png" alt="Home-icon">
+                    <p class="scroll-link__text">HOME</p>
+                </a>
+
+                <a class="navbar__scroll-link">
+                    <img class="scroll-link__image" src="assets/img/user.png" alt="About me-icon">
+                    <p class="scroll-link__text">ABOUT ME</p>
+                </a>
+
+                <a class="navbar__scroll-link">
+                    <img class="scroll-link__image" src="assets/img/skills.png" alt="Skills-icon">
+                    <p class="scroll-link__text">SKILLS</p>
+                </a>
+
+                <a class="navbar__scroll-link">
+                    <img class="scroll-link__image" src="assets/img/portfolio.png" alt="Projects-icon">
+                    <p class="scroll-link__text">PORTFOLIO</p>
+                </a>
+
+                <a class="navbar__scroll-link">
+                    <img class="scroll-link__image" src="assets/img/contact.png" alt="Contact-icon">
+                    <p class="scroll-link__text">CONTACT</p>
+                </a>    
+            </div>
         </nav>
     </header>
 
     <main class="main">
 
+    <div class="main__my-info">
         <div class="main__title-container">
             <h1 class="main__title">HI, I'M JUANES<br><span class="animated-text"></span></h1> 
         </div>
@@ -50,6 +86,20 @@
         <img  class="main__profile-photo" src="assets/img/profile-photo.webp" alt="My Profile Photo">
 
         <p class="main__info">"I'm a passionate UI/UX designer with a mission to create delightful and intuitive digital experiences."</p>
+    </div>
+
+    <div class="main__my-info--desktop">
+        <div class="my-info--desktop__container">
+            <div class="main__title-container">
+                <h1 class="main__title">HI, I'M JUANES<br><span class="animated-text-2"></span></h1> 
+            </div>
+            <p class="main__info">"I'm a passionate UI/UX designer with a mission to create delightful and intuitive digital experiences."</p>
+        </div>
+
+        <img  class="main__profile-photo" src="assets/img/profile-photo.webp" alt="My Profile Photo">
+
+    </div>
+
 
         <button class="main__cv-button">Download CV</button>
 
@@ -114,6 +164,47 @@
                     <button class="project__button project__button--more-info">More info</button>
                 </div>
             </article>
+
+            <div class="portfolio__container">
+
+                <div class="portfolio__card">
+                    <img class="project__image" src="assets/img/project_landing.webp" alt="Landing Page Project">
+                    <div class="card__content">
+                        <p class="card__title">Project Name</p>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        <div class="card__button-container">
+                            <button class="card__button">Live Demo</button>
+                            <button class="card__button secondary">Source Code</button>
+                        </div>  
+                    </div>
+                </div>
+    
+                <div class="portfolio__card">
+                    <img class="project__image" src="assets/img/project_recipes.webp" alt="Recipes Page Project">
+                    <div class="card__content">
+                      <p class="card__title">Project Name</p>
+                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                      <div class="card__button-container">
+                        <button class="card__button">Live Demo</button>
+                        <button class="card__button secondary">Source Code</button>
+                    </div>
+                    </div>
+                </div>
+    
+                <div class="portfolio__card">
+                    <img class="project__image" src="assets/img/project_encryptor.webp" alt="Encrytor Page Project">
+                    <div class="card__content">
+                      <p class="card__title">Project Name</p>
+                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                      <div class="card__button-container">
+                        <button class="card__button">Live Demo</button>
+                        <button class="card__button secondary">Source Code</button>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+              
 
         </section>
 
