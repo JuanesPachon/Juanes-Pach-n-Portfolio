@@ -63,8 +63,9 @@ startAnimation2();
 
 //===================================================================================================
 
+const contactButtonTablet = document.querySelector(".right-container__button");
 const navbarLink = document.querySelectorAll(".navbar__scroll-link");
-const footerImg = document.querySelector(".owner-section__image")
+const footerImg = document.querySelector(".owner-section__image");
 const home = document.querySelector(".main");
 const aboutMe = document.querySelector(".self-info__title");
 const skills = document.querySelector(".main__skills");
@@ -72,6 +73,13 @@ const portfolio = document.querySelector(".portfolio__title");
 const contact = document.querySelector(".contact__title");
 const social = document.querySelector(".footer__title");
 
+const navbar = document.querySelector(".right-container__menu");
+const overlayMobile = document.querySelector(".overlay__mobile");
+const menuOptions = document.querySelectorAll(".scroll-links__link--mobile");
+
+contactButtonTablet.addEventListener("click", () => {
+  contact.scrollIntoView({ behavior: "smooth"});
+})
 
 navbarLink[0].addEventListener("click", () => {
   home.scrollIntoView({ behavior: "smooth" });
@@ -100,6 +108,61 @@ navbarLink[5].addEventListener("click", () => {
 footerImg.addEventListener("click", () => {
   home.scrollIntoView({ behavior: "smooth" });
 })
+
+navbar.addEventListener("click", function () {
+  if (overlayMobile.style.display === "block") {
+    overlayMobile.style.display = "none";
+  } else {
+    overlayMobile.style.display = "block";
+  }
+  toggleMenu();
+  
+});
+
+menuOptions.forEach((option) => {
+  
+  option.addEventListener("click", function () {
+    overlayMobile.style.display =
+      "none";
+  });
+});
+
+menuOptions[0].addEventListener("click", () => {
+  home.scrollIntoView({ behavior: "smooth" });
+})
+
+menuOptions[1].addEventListener("click", () => {
+  aboutMe.scrollIntoView({ behavior: "smooth" });
+})
+
+menuOptions[2].addEventListener("click", () => {
+  skills.scrollIntoView({ behavior: "smooth" });
+})
+
+menuOptions[3].addEventListener("click", () => {
+  portfolio.scrollIntoView({ behavior: "smooth" });
+})
+
+menuOptions[4].addEventListener("click", () => {
+  contact.scrollIntoView({ behavior: "smooth" });
+})
+
+menuOptions[5].addEventListener("click", () => {
+  social.scrollIntoView({ behavior: "smooth" });
+})
+
+function toggleMenu() {
+  overlayMobile.classList.toggle('show');
+}
+
+function ocultarDivSiAnchoEsMayorOIgualA1024() {
+
+  if (window.innerWidth >= 1200) {
+    overlayMobile.style.display = 'none';
+  }
+}
+ocultarDivSiAnchoEsMayorOIgualA1024();
+window.addEventListener('resize', ocultarDivSiAnchoEsMayorOIgualA1024);
 
 //=====================================================================================================
 
