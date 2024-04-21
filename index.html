@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Patua+One&display=swap" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Patua+One&display=swap" rel="stylesheet">
+
     <link rel='preload' href='css/style.css' as='style'>
     <link rel='stylesheet' href='css/style.css'>
 
     <link rel='preload' href='css/normalize.css' as='style'>
     <link rel='stylesheet' href='css/normalize.css'>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Patua+One&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/img/background-navbar.webp" as="image">
 
-    <link rel='icon' href='assets/img/favicon.png' type='image/x-icon'>
+    <meta name="description" content="Explore a world of web development and digital solutions in my portfolio. Each project tells a unique story of innovation and passion, bringing captivating web experiences to life.">
+
+    <link rel='icon' href='assets/img/favicon.ico' type='image/x-icon'>
 
     <title>Juanes Pachon 💎</title>
 </head>
@@ -26,14 +31,14 @@
 
         <nav class="navbar">
             <!-- Mobile Navbar -->
-            <img class="navbar__logo" src="assets/img/Logo_Juanes__bg.png" alt="Main Logo">
+            <img class="navbar__logo" src="assets/img/logo_Juanes__bg.webp" alt="Main Logo">
             <div class="navbar__right-container">
                 <button class="right-container__button">Contact me</button> <!-- Tablet Navbar -->
                 <img class="right-container__dark-mode" src="assets/img/dark-mode-icon.png" alt="Dark mode icon"
                     onclick="toggleDarkMode()">
-                <img class="right-container__light-mode" src="assets/img/light-mode-icon.png" alt="Light mode icon"
+                <img class="right-container__light-mode" loading="lazy" src="assets/img/light-mode-icon.png" alt="Light mode icon"
                     onclick="toggleDarkMode()">
-                <img class="right-container__menu" src="assets/img/menu_bar.png" alt="Menu Bar">
+                <img class="right-container__menu" src="assets/img/menu_bar.svg" alt="Menu Bar">
             </div>
 
         </nav>
@@ -42,41 +47,41 @@
 
             <div class="navbar__container">
                 <div class="navbar-title__Container">
-                    <img class="navbar__logo--desktop" src="assets/img/Logo_Juanes__bg.png" alt="Main Logo">
-                    <img class="right-container__dark-mode2" src="assets/img/dark-mode-icon.png" alt="Dark mode icon"
+                    <img class="navbar__logo--desktop" loading="lazy" src="assets/img/logo_Juanes__bg.webp" alt="Main Logo">
+                    <img class="right-container__dark-mode2" loading="lazy" src="assets/img/dark-mode-icon.png" alt="Dark mode icon"
                         onclick="toggleDarkMode()">
-                    <img class="right-container__light-mode2" src="assets/img/light-mode-icon.png" alt="Light mode icon"
+                    <img class="right-container__light-mode2" loading="lazy" src="assets/img/light-mode-icon.png" alt="Light mode icon"
                         onclick="toggleDarkMode()">
                 </div>
 
 
                 <div class="navbar__scroll-link">
-                    <img class="scroll-link__image" src="assets/img/home.png" alt="Home-icon">
+                    <img class="scroll-link__image" loading="lazy" src="assets/img/home.png" alt="Home-icon">
                     <p class="scroll-link__text">HOME</p>
                 </div>
 
                 <div class="navbar__scroll-link">
-                    <img class="scroll-link__image" src="assets/img/user.png" alt="About me-icon">
+                    <img class="scroll-link__image" loading="lazy" src="assets/img/user.png" alt="About me-icon">
                     <p class="scroll-link__text">ABOUT ME</p>
                 </div>
 
                 <div class="navbar__scroll-link">
-                    <img class="scroll-link__image" src="assets/img/skills.png" alt="Skills-icon">
+                    <img class="scroll-link__image" loading="lazy" src="assets/img/skills.png" alt="Skills-icon">
                     <p class="scroll-link__text">SKILLS</p>
                 </div>
 
                 <div class="navbar__scroll-link">
-                    <img class="scroll-link__image" src="assets/img/portfolio.png" alt="Projects-icon">
+                    <img class="scroll-link__image" loading="lazy" src="assets/img/portfolio.png" alt="Projects-icon">
                     <p class="scroll-link__text">PORTFOLIO</p>
                 </div>
 
                 <div class="navbar__scroll-link">
-                    <img class="scroll-link__image" src="assets/img/contact.png" alt="Contact-icon">
+                    <img class="scroll-link__image" loading="lazy" src="assets/img/contact.webp" alt="Contact-icon">
                     <p class="scroll-link__text">CONTACT</p>
                 </div>
 
                 <div class="navbar__scroll-link" id="navbar__scroll-link__desktop">
-                    <img class="scroll-link__image" src="assets/img/social.png" alt="Contact-icon">
+                    <img class="scroll-link__image" loading="lazy" src="assets/img/social.png" alt="Contact-icon">
                     <p class="scroll-link__text">SOCIAL</p>
                 </div>
 
@@ -106,7 +111,7 @@
                     digital experiences."</p>
             </div>
 
-            <img class="main__profile-photo" src="assets/img/profile-photo.webp" alt="My Profile Photo">
+            <img class="main__profile-photo" src="assets/img/profile-photo.webp" loading="lazy" alt="My Profile Photo">
 
         </div>
 
@@ -131,18 +136,18 @@
 
             <div class="skills__logos">
                 <div class="logos__slide">
-                    <img src="assets/img/icons_html5.png" alt="Html icon" title="HTML5">
-                    <img src="assets/img/icons_css3.png" alt="Css icon" title="CSS3">
-                    <img src="assets/img/icons_JavaScript.png" alt="Javascirpt icon" title="Javascirpt">
-                    <img src="assets/img/icons_bootstrap.png" alt="Boostrap icon" title="Boostrap">
-                    <img src="assets/img/icons_tailwind.png" alt="Tailwind icon" title="Tailwind">
+                    <img src="assets/img/icons_html5.svg" alt="Html icon" title="HTML5">
+                    <img src="assets/img/icons_css3.svg" alt="Css icon" title="CSS3">
+                    <img src="assets/img/icons_javascript.svg" alt="Javascript icon" title="Javascirpt">
+                    <img src="assets/img/icons_bootstrap.svg" alt="Boostrap icon" title="Boostrap">
+                    <img src="assets/img/icons_tailwind.svg" alt="Tailwind icon" title="Tailwind">
                 </div>
                 <div class="logos__slide">
-                    <img src="assets/img/icons_html5.png" alt="Html icon" title="HTML5">
-                    <img src="assets/img/icons_css3.png" alt="Css icon" title="CSS3">
-                    <img src="assets/img/icons_JavaScript.png" alt="Javascirpt icon" title="Javascirpt">
-                    <img src="assets/img/icons_bootstrap.png" alt="Boostrap icon" title="Boostrap">
-                    <img src="assets/img/icons_tailwind.png" alt="Tailwind icon" title="Tailwind">
+                    <img src="assets/img/icons_html5.svg" alt="Html icon" title="HTML5">
+                    <img src="assets/img/icons_css3.svg" alt="Css icon" title="CSS3">
+                    <img src="assets/img/icons_javascript.svg" alt="Javascript icon" title="Javascirpt">
+                    <img src="assets/img/icons_bootstrap.svg" alt="Boostrap icon" title="Boostrap">
+                    <img src="assets/img/icons_tailwind.svg" alt="Tailwind icon" title="Tailwind">
                 </div>
             </div>
 
@@ -151,36 +156,37 @@
         <section class="main__portfolio">
 
             <h2 class="portfolio__title">MY PROJECTS</h2>
+            <div class="portfolio__project__container">
+                <article class="portfolio__project">
+                    <img class="project__image" src="assets/img/project_landing.webp" alt="Landing Page Project">
+                    <div class="project__info-container">
+                        <h3 class="project__title">Paraiso Paipa landing page</h3>
+                        <a href="https://juanespachon.github.io/Landing-Page-JP/" target="_blank"
+                            class="project__button">Live Demo</a>
+                        <a id="more-info__mobile" class="project__button project__button--more-info">More info</a>
+                    </div>
+                </article>
 
-            <article class="portfolio__project">
-                <img class="project__image" src="assets/img/project_landing.webp" alt="Landing Page Project">
-                <div class="project__info-container">
-                    <h3 class="project__title">Paraiso Paipa landing page</h3>
-                    <a href="https://juanespachon.github.io/Landing-Page-JP/" target="_blank"
-                        class="project__button">Live Demo</a>
-                    <a id="more-info__mobile" class="project__button project__button--more-info">More info</a>
-                </div>
-            </article>
+                <article class="portfolio__project">
+                    <img class="project__image" src="assets/img/project_recipes.webp" alt="Recipes Page Project">
+                    <div class="project__info-container">
+                        <h3 class="project__title">BIT Cook recipes page</h3>
+                        <a href="https://juanespachon.github.io/BIT-Cook-Final-Project/" target="_blank"
+                            class="project__button">Live Demo</a>
+                        <a id="more-info__mobile-2" class="project__button project__button--more-info">More info</a>
+                    </div>
+                </article>
 
-            <article class="portfolio__project">
-                <img class="project__image" src="assets/img/project_recipes.webp" alt="Recipes Page Project">
-                <div class="project__info-container">
-                    <h3 class="project__title">BIT Cook recipes page</h3>
-                    <a href="https://juanespachon.github.io/BIT-Cook-Final-Project/" target="_blank"
-                        class="project__button">Live Demo</a>
-                    <a id="more-info__mobile-2" class="project__button project__button--more-info">More info</a>
-                </div>
-            </article>
-
-            <article class="portfolio__project">
-                <img class="project__image" src="assets/img/project_encryptor.webp" alt="Encrytor Page Project">
-                <div class="project__info-container">
-                    <h3 class="project__title">Alura encrytor page</h3>
-                    <a href="https://juanespachon.github.io/Encriptador-JP/" target="_blank"
-                        class="project__button">Live Demo</a>
-                    <a id="more-info__mobile-3" class="project__button project__button--more-info">More info</a>
-                </div>
-            </article>
+                <article class="portfolio__project">
+                    <img class="project__image" src="assets/img/project_encryptor.webp" alt="Encrytor Page Project">
+                    <div class="project__info-container">
+                        <h3 class="project__title">Alura encrytor page</h3>
+                        <a href="https://juanespachon.github.io/Encriptador-JP/" target="_blank"
+                            class="project__button">Live Demo</a>
+                        <a id="more-info__mobile-3" class="project__button project__button--more-info">More info</a>
+                    </div>
+                </article>
+            </div>
 
             <div class="portfolio__container">
 
@@ -356,7 +362,7 @@
         <hr class="footer__divisor">
 
         <div class="footer__owner-section">
-            <img class="owner-section__image" src="assets/img/Logo_Juanes__bg.png" alt="Main logo">
+            <img class="owner-section__image" src="assets/img/logo_Juanes__bg.webp" alt="Main logo">
             <p class="owner-section__text">“Follow your dreams and stick to
                 the plan”</p>
         </div>
