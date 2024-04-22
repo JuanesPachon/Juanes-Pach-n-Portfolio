@@ -128,27 +128,75 @@ menuOptions.forEach((option) => {
 });
 
 menuOptions[0].addEventListener("click", () => {
-  home.scrollIntoView({ behavior: "smooth" });
+  const homeRect = home.getBoundingClientRect();
+  const offsetPosition = 120;
+
+  const topPosition = homeRect.top - offsetPosition;
+
+  window.scrollTo({
+    top: topPosition + window.scrollY,
+    behavior: "smooth"
+  });
 })
 
 menuOptions[1].addEventListener("click", () => {
-  aboutMe.scrollIntoView({ behavior: "smooth" });
+  const homeRect = aboutMe.getBoundingClientRect();
+  const offsetPosition = 120;
+
+  const topPosition = homeRect.top - offsetPosition;
+
+  window.scrollTo({
+    top: topPosition + window.scrollY,
+    behavior: "smooth"
+  });
 })
 
 menuOptions[2].addEventListener("click", () => {
-  skills.scrollIntoView({ behavior: "smooth" });
+  const homeRect = skills.getBoundingClientRect();
+  const offsetPosition = 60;
+
+  const topPosition = homeRect.top - offsetPosition;
+
+  window.scrollTo({
+    top: topPosition + window.scrollY,
+    behavior: "smooth"
+  });
 })
 
 menuOptions[3].addEventListener("click", () => {
-  portfolio.scrollIntoView({ behavior: "smooth" });
+  const homeRect = portfolio.getBoundingClientRect();
+  const offsetPosition = 120;
+
+  const topPosition = homeRect.top - offsetPosition;
+
+  window.scrollTo({
+    top: topPosition + window.scrollY,
+    behavior: "smooth"
+  });
 })
 
 menuOptions[4].addEventListener("click", () => {
-  contact.scrollIntoView({ behavior: "smooth" });
+  const homeRect = contact.getBoundingClientRect();
+  const offsetPosition = 120;
+
+  const topPosition = homeRect.top - offsetPosition;
+
+  window.scrollTo({
+    top: topPosition + window.scrollY,
+    behavior: "smooth"
+  });
 })
 
 menuOptions[5].addEventListener("click", () => {
-  social.scrollIntoView({ behavior: "smooth" });
+  const homeRect = social.getBoundingClientRect();
+  const offsetPosition = 120;
+
+  const topPosition = homeRect.top - offsetPosition;
+
+  window.scrollTo({
+    top: topPosition + window.scrollY,
+    behavior: "smooth"
+  });
 })
 
 function toggleMenu() {
