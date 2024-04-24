@@ -333,21 +333,25 @@
 
             <p class="contact__text">Feel free to Contact me by submitting the form below and we will be in touch</p>
 
-            <form class="contact__form" action="#" method="POST">
-                <label class="form__label" for="name">Name:</label>
-                <input class="form__input" type="text" id="name" name="name" required>
+            <div class="contact__container">
+                <form class="contact__form" action="#" method="POST">
+                    <label class="form__label" for="name">Name:</label>
+                    <input class="form__input" type="text" id="name" name="name" required>
 
-                <label class="form__label" for="email">Email:</label>
-                <input class="form__input" type="email" id="email" name="email" required>
+                    <label class="form__label" for="email">Email:</label>
+                    <input class="form__input" type="email" id="email" name="email" required>
 
-                <label class="form__label" for="message">Message:</label>
-                <textarea class="form__textarea" id="message" name="message" required></textarea>
+                    <label class="form__label" for="message">Message:</label>
+                    <textarea class="form__textarea" id="message" name="message" required></textarea>
 
-                <div class="form__botton-container">
-                    <button class="form__button" type="submit">Send</button>
-                    <button class="form__button form__button--reset" type="reset">Reset</button>
-                </div>
-            </form>
+                    <div class="form__botton-container">
+                        <button class="form__button" type="submit">Send</button>
+                        <button class="form__button form__button--reset" type="reset">Reset</button>
+                    </div>
+                </form>
+
+                <img class="contact__logo" src="assets/img/contact-photo.webp" alt="Contact logo">
+            </div>
 
         </section>
 

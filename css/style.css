@@ -57,7 +57,8 @@ h2 {
 .desktop-navbar,
 .main__my-info--desktop,
 .portfolio__container,
-.overlay {
+.overlay,
+.contact__logo {
   display: none;
 }
 
@@ -122,21 +123,8 @@ body.dark-mode .project__button--more-info {
   border: black solid 4px;
 }
 
-body.dark-mode .contact__form {
-  background-color: #3d4547;
-}
-
 body.dark-mode .form__label {
   color: white;
-}
-
-body.dark-mode .form__input,
-body.dark-mode .form__textarea {
-  background-color: #9aa4a7;
-}
-
-body.dark-mode .form__button--reset {
-  background-color: rgb(171, 23, 23);
 }
 
 body.dark-mode .scroll-link__text,
@@ -932,6 +920,10 @@ body.dark-mode .content__text {
 
 @media (min-width: 1024px) {
   
+  h2 {
+    font-size: 3.5rem;
+  }
+
   .background-image {
     background-size: contain;
   }
@@ -1073,6 +1065,34 @@ body.dark-mode .content__text {
   .card__button--secondary:hover {
     background-color: rgb(222, 210, 210);
   }
+
+  .main__contact {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+
+  .contact__container {
+    background-image: url(../assets/img/background-navbar.webp);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    column-gap: 3rem;
+  }
+
+  .contact__logo {
+    display: inline;
+    max-width: 40%;
+    align-self: center;
+  }
+
+  .contact__form {
+    width: 100%;
+    background-image: none;
+    border: none;
+    margin: 0;
+  }
+
 }
 /* //MARK: RESPONSIVE DESKTOP ============================================================================================*/
 
@@ -1163,7 +1183,7 @@ body.dark-mode .content__text {
     column-gap: 0.6rem;
     border-radius: 20px;
     border: 4px solid #103c2f;
-    transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.3s ease;
     cursor: url("../assets/img/pointer.webp"), pointer;
   }
 
@@ -1287,8 +1307,6 @@ body.dark-mode .content__text {
   }
 
   .contact__form {
-    width: 60%;
-    margin: 2rem auto;
     margin-bottom: 0rem;
   }
 
