@@ -919,7 +919,33 @@ body.dark-mode .content__text {
 /* //MARK: RESPONSIVE SMALL LAPTOP ==============================================================================================*/
 
 @media (min-width: 1024px) {
-  
+
+  @keyframes show {
+
+    from {
+      opacity: -0;
+    }
+
+    to {
+      opacity: 1;
+    } 
+  }
+
+  .main__skills,
+  .portfolio__title,
+  .portfolio__container,
+  .main__contact {
+    view-timeline-name: --section;
+    view-timeline-axis: block;
+
+    animation-timeline: --section;
+    animation-name: show;
+
+    animation-range: entry 18% cover 35%;
+    animation-fill-mode: backwards;
+  }
+
+
   h2 {
     font-size: 3.5rem;
   }
